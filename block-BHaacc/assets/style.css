@@ -55,7 +55,7 @@ body{
     font-family: 'Noto Sans KR', sans-serif;
 }
 .container{
-    max-width: 1400px;
+    max-width: 1370px;
     padding: 0 32px;
     margin:  0 auto;
 }
@@ -78,6 +78,9 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.align-start{
+    align-items: flex-start;
 }
 .btn {
     padding: 14px 22px;
@@ -162,9 +165,6 @@ a{
     background: linear-gradient(to right , rgba(79,147,219,0.8) ,rgba(102,179,90,0.8)), url(./home-bg.jpg) 0 50%  no-repeat ;
     background-size: cover;
 }
-.hero .flex{
-    align-items: flex-start;
-}
 .hero .hero-heading{
      font-size: 44px;
      margin: 20px 0 30px 0;
@@ -186,16 +186,13 @@ a{
 /* introduce section */
 .introduce{
     position: relative;
-    padding: 100px 0 0 0;
-    background-color: white
-    ;
+    background-color: white;
 }
 .introduce .introduce-content{
     flex: 0 1 40%;
-    margin-bottom: 45px;
 }
 .introduce .design-percentage{
-    flex: 0 1 20%;
+    flex: 0 1 30%;
 }
 .introduce h1{
     margin-bottom: 5px;
@@ -206,38 +203,37 @@ a{
     background-color: lightgray;
     margin-right: 5px;
 }
-.introduce .design-percentage .line{
-    height: 3px;
-    background-color: black;
+.progress{
+    padding: 0 32px;
 }
 .introduce .design-percentage h3{
     font-weight: 600;
     font-size: 16px;
     color: #424242;
 }
-.introduce .text{
-    margin-top: 20px;
-    color: #939393;
+.introduce .introduce-content .text{
+    margin: 25px 0;
 }
-.design-percentage .web-line{
-    width: 85%;
+.introduce progress{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    margin-bottom: 24px;
+    background-color: black;
 }
-.design-percentage .photography-line{
-    width: 90%;
+progress::-webkit-progress-bar{
+    background-color:lightgray;
 }
-.design-percentage .content-line{
-    width: 70%;
-}
-.design-percentage .cms-line{
-    width: 70%;
+progress::-webkit-progress-value{
+    background-color: black;
 }
 .introduce .design-percentage p{
     font-weight: 600;
     color: black;
-    margin: 5px 0;
 }
 .introduce .design-percentage .flex{
-    margin: 10px 0;
+    margin:0 0 10px 0 ;
 }
 /* image part of introduction  aside section*/
 
@@ -245,7 +241,11 @@ a{
     flex: 0 1 30%;
     font-size: 0;
 }
-
+.introduce .about-image img{
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+}
 /* blog scetion */
 .blog{
     background-color: #efefef;
@@ -273,15 +273,12 @@ a{
      flex-wrap: wrap;
  }
 .col-blog .blog-content{
-    padding:0 40px ;
+    padding:32px ;
     flex: 0 1 60%;
     font-size: 16px;
 }
 .blog img{
     width: 100%
-}
-.blog p{
-    margin: 10px 0 20px 0;
 }
 .blog-content time{
     color: #d04932;
@@ -295,7 +292,10 @@ a{
     display: inline-block;
     margin: 20px 0 30px 0;
 }
-
+.blog .blog-content .secondary-heading{
+    font-size: 24px;
+    margin-bottom: 12px;
+}
 /* work */
 .work .col-work{
     margin-top: 50px;
@@ -323,13 +323,14 @@ a{
     flex: 0 1 48%;
     margin-bottom: 20px;
 }
-.input1 input{
+.input1 .input2{
     width: 100%;
     padding: 20px 30px;
     border-radius: 8px;
     border: none;
     outline: none;
     color: #939393;
+    background-color: white;
     font-size: 16px;
 }
 .map{
